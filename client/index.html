@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start header -->
+        <header>
+            <div class="nav">
+                <a href=""><p>Career</p></a>                             
+                <a href=""><p>Home</p></a>
+                <a href=""><p>Jobs</p></a>
+                <a href=""><p>Contact</p></a>                
+                <div class="btn-joinus">
+                    <a href=""><p>Register</p></a>
+                    <!-- <i class="fa-solid sfa-arrow-right"></i> -->
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+
+        <!-- Start container -->
+        <div id="containers">
+            <!-- Start section intro -->
+            <div class="intro">
+                <div class="col-half">
+                    <div class="title-desc">
+                        <h1>Get The <span>Career</span> <br> You Deserve</h1>
+                        <p>
+                            We are bringing together bright minds who embrace challenges, go the extra mile for added value, and strive to meet very high standards.
+                    </div>
+    
+                    <div class="search-job">
+                        <div class="search-job-byKey">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input value="" class="test" type="text" placeholder="Job title, keywords ...">
+                        </div>
+                        
+                        <section>
+                            <div class="search-job-byLoca">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input type="text" placeholder="Locations">
+                            </div>
+                            
+                            <div class="btn-search-job">
+                                SEARCH
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-half">                   
+                    <div class="data">
+                        <span>
+                            <div class="circle"></div>
+                            <p>2m+</p>
+                            <p>Jobs</p>
+                        </span>
+                        <span>
+                            <div class="circle"></div>
+                            <p>500k+</p>
+                            <p>Successful Hiring</p>
+                        </span>
+                        <span>
+                            <div class="circle"></div>
+                            <p>250k+</p>
+                            <p>Partners</p>
+                        </span>
+                        <span>
+                            <div class="circle"></div>
+                            <p>156k+</p>
+                            <p>Employee</p>
+                        </span>
+                        <!-- <img style="width: 500px;" src="./assets/img/home/illustration.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
+            <!-- End section intro -->
+
+            <!-- Start section FOR CANDIDATES -->
+            <div class="for-candidates">
+                <div class="col-w70">
+                    <div class="step1">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_signup_job.png" alt="">
+                        </span>
+                        <span>STEP 1</span>
+                        <h5>Create an account</h5>
+                        <p>Nunc nonummy metus. Donec elit libero.</p>
+                    </div>
+                    <div class="step2">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_resume_job.png" alt="">
+                        </span>
+                        <span>STEP 2</span>
+                        <h5>Complete your profile</h5>
+                        <p>Nunc nonummy metus. Donec elit libero.</p>
+                    </div>
+                    <div class="step3">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_resume_job.png" alt="">
+                        </span>
+                        <span>STEP 3</span>
+                        <h5>Upload Your CV</h5>
+                        <p>Nunc nonummy metus. Donec elit libero.</p>
+                    </div>
+                    <div class="step4">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_search_job.png" alt="">
+                        </span>
+                        <span>STEP 4</span>
+                        <h5>Search your job</h5>
+                        <p>Nunc nonummy metus. Donec elit libero.</p>
+                    </div>
+                </div>
+
+                <div class="col-w30">
+                    <span><p>FOR CANDIDATES</p></span>
+                    <h2>Explore Thousands <br> of Jobs</h2>
+                    <p>Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Morbi mattis ullamcorper velit.</p>
+                    <div class="btn-uploadCV">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        Upload your CV
+                    </div>
+                </div>    
+            </div>
+            <!-- End section FOR CANDIDATES -->
+
+            <!-- Start section FEATURED JOBS -->
+            <div class="featured-jobs">
+                <div class="col-w30">
+                    <span><p>FEATURED JOBS</p></span>
+                    <h4>Jobs available apply to Editorial Specialist, Account Manager,<br> Human Resources Specialist and more!</h4>
+                    <p>Jobs available apply to Editorial Specialist, Account Manager, Human Resources Specialist and more!</p>
+                    <div class="btn-viewAllJobs">
+                        View All Jobs
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="col-w70 jobs" id="jobs-js"></div>
+            </div>
+            <!-- End section FEATURED JOBS -->
+
+            <!-- Start section FOR RECRUITERS -->
+            <div class="for-recruiters">
+                <div class="col-w50">
+                    <span><p>FOR RECRUITERS</p></span>
+                    <h2>Do You Have A <br> Position To Post Job?</h2>
+                    <p>Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Morbi mattis ullamcorper velit.</p>
+                    <div class="btn-postJob">
+                        <i class="fa-regular fa-file-lines"></i>
+                        Post a Job
+                    </div>
+                </div>
+                
+                <div class="col-w50">
+                    <img src="./assets/img/home/illustration_recruitment.svg" alt="">
+                </div>                
+            </div>
+            <!-- End section FOR RECRUITERS -->
+
+            <!-- Start section Top Companies -->
+            <div class="top-companies">
+                <h2>Top Companies</h2>
+
+                <marquee behavior="" direction="">
+                    <div class="list-company">
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_1.png" alt="">
+                            <p>101 jobs</p>
+                            <h6>Lueilwitz and Sons</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_2.png" alt="">
+                            <p>102 jobs</p>
+                            <h6>Gleichner, Mueller and Tromp</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_3.png" alt="">
+                            <p>103 jobs</p>
+                            <h6>Nikolaus - Leuschke</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_4.png" alt="">
+                            <p>104 jobs</p>
+                            <h6>Hegmann, Kreiger and Bayer</h6>
+                        </div>
+                    </div>
+                </marquee>                
+
+                <marquee behavior="" direction="right">
+                    <div class="list-company">
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_9.png" alt="">
+                            <p>109 jobs</p>
+                            <h6>Mraz, Donnelly and Collins</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_10.png" alt="">
+                            <p>110 jobs</p>
+                            <h6>Padberg - Bailey</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_11.png" alt="">
+                            <p>111 jobs</p>
+                            <h6>Heidenreich, Stokes and Parker</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_12.png" alt="">
+                            <p>112 jobs</p>
+                            <h6>Pagac and Sons</h6>
+                        </div>
+                    </div>
+                </marquee>
+
+                <marquee behavior="" direction="">
+                    <div class="list-company">
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_5.png" alt="">
+                            <p>105 jobs</p>
+                            <h6>Grimes Inc</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_6.png" alt="">
+                            <p>106 jobs</p>
+                            <h6>Durgan - Murazik</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_7.png" alt="">
+                            <p>107 jobs</p>
+                            <h6>Altenwerth, Medhurst and Roberts</h6>
+                        </div>
+                        <div class="list-company__item">
+                            <img src="./assets/img/home/icons/ic_companies/company_8.png" alt="">
+                            <p>108 jobs</p>
+                            <h6>Raynor Group</h6>
+                        </div>
+                    </div>
+                </marquee>
+            </div>
+            <!-- End section Top Companies -->
+
+            <!-- Start section Hot Categories -->
+            <div class="hot-categories">
+                <h2>Hot Categories</h2>
+                <div class="list-category">
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_money.svg" alt="">
+                        </span>
+                        <h5>Accounting / Finance</h5>
+                        <p>101 jobs</p>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_marketing_bullhorn.svg" alt="">
+                        </span>
+                        <h5>Marketing</h5>
+                        <p>102 jobs</p>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_design.svg" alt="">
+                        </span>
+                        <h5>Design</h5>
+                        <p>103 jobs</p>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_web_programming.svg" alt="">
+                        </span>
+                        <h5>Development</h5>
+                        <p>104 jobs</p>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_chip.svg" alt="">
+                        </span>
+                        <h5>IT - Hardware</h5>
+                        <p>105 jobs</p>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_banking.svg" alt="">
+                        </span>
+                        <h5>Banking</h5>
+                        <p>106 jobs</p>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_customer_service.svg" alt="">
+                        </span>
+                        <p>107 jobs</p>
+                        <h5>Customer Service</h5>
+                    </div>
+                    <div class="list-category__item">
+                        <span>
+                            <img src="./assets/img/home/icons/ic_categories/ic_stethoscope.svg" alt="">
+                        </span>
+                        <h5>Health and Care</h5>
+                        <p>108 jobs</p>
+                    </div>
+                </div>
+                <div class="btn-viewAllCate">
+                    View All Categories
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <!-- End section Hot Categories -->            
+
+            <!-- Start section feedbacks -->
+            <div class="feedbacks">
+
+            </div>
+            <!-- End section feedback -->
+
+            <!-- Start section clients -->
+            <div class="clients">
+
+            </div>
+            <!-- End section clients -->
+
+            <!-- Start section blog -->
+            <div class="blog">
+
+            </div>
+            <!-- End section blog -->
+
+            <!-- Start section download app -->
+            <div class="download-app">
+                <div class="download-app__note">
+                    <div class="col-w50">
+                        <h2>Download App</h2>
+                        <p>Now finding the new job just got even easier with our new app!</p>
+                        <div class="dl_apple">
+                            <img src="./assets/img/home/icons/ic_download-app/ic_app_store.svg" alt="">
+                            <span>
+                                <p>Download on the</p>
+                                <p>Apple Store</p>
+                            </span>
+                        </div>
+                        <div class="dl_apple">
+                            <img src="./assets/img/home/icons/ic_download-app/ic_google_play.svg" alt="">
+                            <span>
+                                <p>Download on the</p>
+                                <p>Google Play</p>
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="col-w50">
+                        <img src="./assets/img/home/career_download_app.png" alt="">
+                    </div> 
+                </div>               
+            </div>
+            <!-- End section download app -->
+
+            <!-- Start section Subscribe -->
+            <div class="subscribe">
+                <h2>Get The Right Job For You</h2>
+                <p>Subscribe to get updated on latest and relevant <br> career opportunities</p>
+                <section>
+                    <div class="input-enter_email">
+                        <input type="text" placeholder="Enter your email ...">
+                    </div>
+                    
+                    <div class="btn-sub">
+                        Subscribe
+                    </div>
+                </section>
+            </div>
+            <!-- End section Subscribe -->
+        </div>
+        <!-- End container -->
+
+
+        <!-- Start footer -->
+        <footer>
+
+        </footer>
+        <!-- End footer -->
+        <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/header.js"></script>
+    </div>
+</body>
+</html>

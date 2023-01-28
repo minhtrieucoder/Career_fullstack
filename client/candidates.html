@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR CANDIDATES</title>
+    <link rel="stylesheet" href="./assets/css/candidates.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start header -->
+        <header>
+            <div class="nav">
+                <a href=""><p>Career</p></a>                             
+                <a href=""><p>Home</p></a>
+                <a href=""><p>Jobs</p></a>
+                <a href=""><p>Contact</p></a>                
+                <div class="btn-role">
+                    <a href=""><p>Candidates Role</p></a>
+                    <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        
+        <!-- Start container -->
+        <div id="containers">
+            <div class="col-w35">
+                <div class="filter-jobs">
+                    <h4>Job types</h4>
+                    <div class="filter-jobs__types">
+                        <a onclick="filterByType(0)" class="type">Part time</a>
+                        <a onclick="filterByType(1)" class="type">Full time</a>
+                        <a onclick="filterByType(2)" class="type">Remote</a>
+                        <a onclick="filterByType(3)" class="type">Freelance</a>
+                    </div>
+
+                    <h4>Job locations</h4>
+                    <div class="filter-jobs__locations">
+                        <a onclick="filterByLocation(0)" class="loca">EU</a>
+                        <a onclick="filterByLocation(1)" class="loca">Korea</a>
+                        <a onclick="filterByLocation(2)" class="loca">Japan</a>
+                        <a onclick="filterByLocation(3)" class="loca">Singapore</a>
+                        <a onclick="filterByLocation(4)" class="loca">Ha Noi</a>
+                        <a onclick="filterByLocation(5)" class="loca">Da Nang</a>
+                        <a onclick="filterByLocation(6)" class="loca">Ho Chi Minh</a>
+                    </div>     
+
+                    <h4>Job levels</h4>
+                    <div class="filter-jobs__levels">
+                        <a onclick="filterByLevel(0)" class="level">Intern</a>
+                        <a onclick="filterByLevel(1)" class="level">Fresher</a>
+                        <a onclick="filterByLevel(2)" class="level">Junior</a>
+                        <a onclick="filterByLevel(3)" class="level">Senior</a>
+                        <a onclick="filterByLevel(4)" class="level">Manager</a>
+                        <a onclick="filterByLevel(5)" class="level">Director</a>`       
+                    </div>   
+                    
+                    <h4>Categories</h4>
+                    <div class="filter-jobs__categories">                        
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Design" id="cate-des">
+                            <label for="cate-des">Design</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Development" id="cate-dev">
+                            <label for="cate-dev">Development</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="IT - Hardware" id="cate-hard">
+                            <label for="cate-hard">IT - Hardware</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Information Technology" id="cate-it">
+                            <label for="cate-it">Information Technology</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Engineering" id="cate-engi">
+                            <label for="cate-engi">Engineering</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="HR & Recruiting" id="cate-hr">
+                            <label for="cate-hr">HR & Recruiting</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Marketing" id="cate-mar">
+                            <label for="cate-mar">Marketing</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Business Development" id="cate-business">
+                            <label for="cate-business">Business Development</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Management" id="cate-manager">
+                            <label for="cate-manager">Management</label>                        
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Education" id="cate-edu">
+                            <label for="cate-edu">Education</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Healthcare" id="cate-health">
+                            <label for="cate-health">Healthcare</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Multimedia Communications" id="cate-mul">
+                            <label for="cate-mul">Multimedia Communications</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Customer Service" id="cate-cus">
+                            <label for="cate-cus">Customer Service</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Accounting / Finance" id="cate-acc_fin">
+                            <label for="cate-acc_fin">Accounting / Finance</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Administrative" id="cate-admin">
+                            <label for="cate-admin">Administrative</label>
+                        </div>
+                        <div class="category-item">
+                            <input onclick="filterByCategory()" class="cate" type="checkbox" value="Transport / Logistics" id="cate-logis">
+                            <label for="cate-logis">Transport / Logistics</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-w65">
+                <div class="jobs" id="jobs-js"></div>
+            </div>
+
+        </div>
+        <!-- End container -->        
+
+        <!-- Start footer -->
+        <footer>
+
+        </footer>
+        <!-- End footer -->
+        <script src="./assets/js/candidates.js"></script>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/auth.css">
+</head>
+<body>
+    <div id="app">
+        <div class="form-signup">
+            <h2>Career</h2>
+            <div class="btn-showForm">
+                <h3 class="btn-showRegister">Register</h3>
+                <h3 onclick="showRegister()" class="btn-showSignin btn-hide">Sign in</h3>
+            </div>
+            <h4>Register with Email address</h4>
+            <form>
+                <input id="registerFullname" type="text" placeholder="Full name">
+                <input id="registerUsername" type="text" placeholder="Username">
+                <input id="registerEmail" type="email" placeholder="Email address">
+                <input id="registerPassword" type="password" placeholder="Password">
+                <input id="registerConfirmpassword" type="password" placeholder="Confirm password">
+                <div class="role">
+                    <input type="radio" name="role" id="candidates" checked>
+                    <label for="candidates">Candidates</label>
+                    <input type="radio" name="role" id="recruiters">
+                    <label for="recruiters">Recruiters</label>
+                </div>
+                <input  onclick="register()" type="button" class="btn-register" value="Register" required>
+            </form>
+        </div>
+
+        <div class="form-signin form-hide">
+            <h2>Career</h2>
+            <div class="btn-showForm">
+                <h3 onclick="showSignin()" class="btn-showRegister btn-hide">Register</h3>
+                <h3 class="btn-showSignin">Sign in</h3>
+            </div>
+            <h4>Sign in with Email address</h4>
+            <form>
+                <input id="signinUsername" type="text" placeholder="Username">
+                <input id="signinEmail" type="email" placeholder="Email address">
+                <input id="signinPassword" type="password" placeholder="Password">
+                <input onclick="signin()" type="button" class="btn-signin" value="Sign in" required>
+                <a href="./signin/recruiters.html"></a>
+            </form>
+        </div>
+        
+        <div class="banner">
+            <img src="./assets/img/auth01.jpg" alt="">
+        </div>
+
+        <script src="./assets/js/auth.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins&display=swap');
+
+/* chung */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* hiệu ứng cuộn cho web */
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.form-hide {
+    display: none;
+}
+
+.btn-hide {
+    color: rgb(0, 0, 0, 0.6) !important;
+    cursor: pointer;
+    background-color: #f6f9fc;
+    /* background-color: #fa541c; */
+} 
+
+.form-signup,
+.form-signin {
+    width: 35%;
+    padding: 34px 60px;
+}
+
+.form-signup h2,
+.form-signin h2 {
+    color: #fa541c;
+    font-weight: 800;
+    font-size: 4.8rem;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 14px;
+}
+
+.form-signup .btn-showForm,
+.form-signin .btn-showForm {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    margin: 12px 0;
+    /* background-color: #f6f9fc; */
+    background-color: #fa541c;
+}
+
+.form-signup .btn-showForm .btn-showRegister,
+.form-signup .btn-showForm .btn-showSignin,
+.form-signin .btn-showForm .btn-showRegister,
+.form-signin .btn-showForm .btn-showSignin {
+    width: 60%;
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    /* text-transform: uppercase; */
+    padding: 6px 12px;
+    margin: 6px;
+    border-radius: 12px;
+}
+
+.form-signup h4,
+.form-signin h4 {
+    color: rgb(0, 0, 0, 0.7);
+    font-weight: 800;
+    font-size: 2.2rem;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 6px;
+}
+
+.form-signup p, 
+.form-signin p {
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 26px;
+}
+
+.form-signup p a,
+.form-signin p a {
+    color: #fa541c;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.form-signup p a:hover,
+.form-signin p a:hover {
+    color: #b3200e;
+}
+
+.form-signup input,
+.form-signup label,
+.form-signin input {
+    margin-top: 12px;
+    width: 100%;
+    border: none;
+    padding: 12px 12px;
+    font-size: 1.4rem;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 8px;
+    color: rgb(0, 0, 0, 0.6);
+    background-color: #f6f9fc;
+    /* border: 1px solid rgb(192, 192, 192); */
+}
+
+.form-signup input:focus,
+.form-signin input:focus {
+    outline: 0;
+}
+
+.form-signup label {
+    border: none !important;
+}
+
+.form-signin input {
+    margin-top: 36px !important;
+}
+
+.form-signup .role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-signup .role input[type=radio] {
+    width: auto;
+}
+
+.form-signup .role label {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.form-signup input[type=button],
+.form-signin input[type=button] {
+    cursor: pointer;
+    margin-top: 24px;
+    color: #fff;
+   background-color: #fa541c;
+}
+
+.form-signin input[type=button] {
+    margin-top: 48px !important;
+}
+
+.form-signup input[type=button]:hover,
+.form-signin input[type=button]:hover {
+background-color: #b3200e;
+}
+
+.banner {
+    width: 65%;
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.banner img {
+    opacity: 0.4;
+    width: 100%;
+}

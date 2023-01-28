@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@200;300;400&display=swap');
+
+/* chung */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* hiệu ứng cuộn cho web */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.col-w20 {
+    width: 20%;
+}
+
+.col-w80 {
+    width: 80%;
+}
+
+/* Start header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    height: 64px;
+    padding-left: 36px;
+    padding-right: 36px;
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    align-items: center;    
+    border-bottom: 1px solid #e8e8e8;
+}
+
+header .nav {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    gap: 28px;
+}
+
+header .nav a {
+    display: block;
+}
+
+header .nav > a:first-child {
+    margin-right: auto;
+}
+
+header .nav a p {
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+header .nav a:hover p {
+    color: #fa541c;
+}
+
+header .nav > a:first-child p {
+    color: #fa541c;
+    font-weight: 800;
+    font-size: 3.2rem;
+    margin-right: auto;
+    text-transform: capitalize;
+}
+
+header .nav > a:first-child:hover p {
+    color: #b3200e;
+}
+
+.btn-role {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 18px;
+    border-radius: 12px;
+    background-color: #fa541c;
+}
+
+.btn-role a p {
+    font-size: 1.6rem !important;
+    color: #fff !important;
+    /* font-weight: 400 !important; */
+    text-transform: capitalize !important;
+}
+
+.btn-role:hover {
+    background-color: #b3200e;
+}
+
+.btn-joinus:hover a p {
+    color: #fff !important;
+}
+
+/* End header */
+
+
+/* Start container */
+#containers {
+    margin-top: 64px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.col-w20 {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    margin-top: 64px;
+    border-right: 1px solid #e8e8e8;
+}
+
+.sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .info .avatar,
+.sidebar .info .name {
+    margin-left: 20px;
+}
+
+.sidebar .info .avatar {
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin-top: 24px;
+}
+.sidebar .info .name:first-child {
+    text-transform: uppercase;
+    margin-top: 34px;
+    margin-bottom: 18px;
+}
+
+.sidebar .info .name {
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+    font-family: 'Barlow', sans-serif;
+    margin-top: 10px;
+}
+
+.sidebar .sidebar-nav {
+    width: 90%;
+    /* padding-top: 12px; */
+    /* padding-bottom: 12px; */
+    margin-top: auto;
+    margin-bottom: 12px;
+    border-top: 1.4px solid #e8e8e8;
+    border-bottom: 1.4px solid #e8e8e8;
+}
+
+.sidebar .sidebar-nav .item {
+    padding: 12px 16px;
+    margin: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+.btn-active {
+    background-color: rgba(145, 158, 171, 0.16);
+}
+
+.sidebar .sidebar-nav .item:hover p {
+    color: #fa541c;
+}
+
+.sidebar .sidebar-nav .item i {
+    font-size: 1.8rem;
+    margin-right: 14px;
+}
+
+.sidebar .sidebar-nav .item p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.sidebar .btn-signout {
+    width: 90%;
+    color: #fff;
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #fa541c;
+}
+
+.sidebar .btn-signout:hover {
+    background-color: #b3200e;
+}
+
+.sidebar .btn-signout i {
+    font-size: 1.4rem;
+    margin-right: 12px;
+}
+
+.sidebar .btn-signout p {
+    font-size: 1.6rem;
+    /* font-weight: 600; */
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+}
+
+.col-w80 {
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0; */
+    /* margin-bottom: 64px; */
+    background-color: #f6f7fa;
+}
+
+.col-w80 #banner {
+    width: 100%;
+    /* height: 100%; */
+    /* background: url(/assets/img/background_signin.png) no-repeat; */
+    /* background-size: cover; */
+}
+.col-w80 #banner img {
+    width: 100%;
+}
+
+.col-w80 #showJobs {
+    margin-bottom: 64px;
+}
+
+.col-w80 #showJobs h3 {
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 3.4rem;
+    font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    margin: 22px 44px;
+}
+
+.col-w80 #showJobs .btn-createJob {
+    width: 125px;
+    color: #fff;
+    padding: 10px 12px;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #fa541c;
+}
+
+.col-w80 #showJobs .btn-createJob i {
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.col-w80 #showJobs .btn-createJob p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+}
+
+.col-w80 #showJobs .btn-createJob:hover {
+    background-color: #b3200e;
+}
+
+.col-w80 #showJobs .subnav-job {
+    border-radius: 12px;
+    margin-left: 80px;
+    margin-bottom: 25px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.col-w80 #showJobs .subnav-job h5 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0, 0.6);
+    font-family: 'Barlow', sans-serif;
+}
+
+.subnav-job-active {
+    color: #fa541c;
+    /* color: #fff; */
+    /* background-color: #fa541c; */
+    border-bottom: 2.2px solid #fa541c;;
+}
+
+.col-w80 #showJobs .list-job {
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 0 0 12px; */
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgb(3 0 71 / 9%);
+}
+
+.col-w80 #showJobs .list-job .job-item {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-top: 0.6px solid rgb(192, 192, 192, 0.4);
+}
+
+.col-w80 #showJobs .list-job .job-item:hover {
+    background-color: rgba(145, 158, 171, 0.16);
+}
+
+.col-w80 #showJobs .list-job .job-item:first-child {
+    height: 46px;
+    border-top: none !important;
+    cursor: unset;
+    /* font-weight: 500; */
+    background-color: rgba(145, 158, 171, 0.16);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.col-w80 #showJobs .list-job .job-item:first-child p {
+    font-weight: 500;
+}
+
+.job-item p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 16px;
+}
+
+.job-item p:last-child {
+    padding: 0;
+}
+
+.job-item i {
+    opacity: 0.6;
+    /* color: rgb(250, 84, 28, 0.7); */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 20px;
+    /* color: rgb(0, 0, 0, 0.6); */
+}
+
+.job-item i:hover {
+    color: #b3200e;
+}
+/*  */
+
+.job-item .jobQuantity {
+    width: 6%;
+    text-align: center;
+}
+
+.job-item .jobTitle {
+    width: 18%;
+}
+
+.job-item .jobLocation {
+    width: 15%;
+}
+
+.job-item .jobCompany {
+    width: 15%;
+}
+
+.job-item .jobPosterID {
+    width: 36%;
+}
+
+/* Start section create new job */
+.col-w80 #createJob h3 {
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 3.4rem;
+    font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    margin: 22px 44px;
+}
+
+.col-w80 #createJob .form-create-job {
+    width: 90%;
+    padding: 22px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgb(3 0 71 / 9%);
+}
+
+
+.col-w80 #createJob .form-create-job .row {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-w80 #createJob .form-create-job .row label {    
+    width: 100%;
+    padding: 12px 16px;
+    text-align: right;
+    margin: 0px 6px;
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.col-w80 #createJob .form-create-job .row input {    
+    width: 100%;
+    padding: 12px 16px;
+    margin: 0px 6px;
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    border: none;    
+    border: 1px solid rgb(192, 192, 192);
+    /* border: 1.4px solid #e8e8e8; */
+    background-color: #f6f7fa;
+}
+
+.col-w80 #createJob .form-create-job .row select {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 0px 6px;
+    cursor: pointer;
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    border: none;
+    border: 1px solid rgb(192, 192, 192);
+    /* border: 1px solid #e8e8e8; */
+    background-color: #f6f7fa;
+}
+
+.col-w80 #createJob .form-create-job .row input:focus,
+.col-w80 #createJob .form-create-job .row select:focus,
+.col-w80 #createJob .form-create-job .row textarea:focus {
+    outline: none;
+}
+
+.col-w80 #createJob .form-create-job .row textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 0px 6px;
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    /* border: 1px solid #e8e8e8; */
+    border: 1px solid rgb(192, 192, 192);
+    background-color: #f6f7fa;
+    text-align: left;
+}
+
+.col-w80 #createJob .btn-saveJob {
+    width: 150px;
+    color: #fff;
+    padding: 10px 12px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #fa541c;
+}
+
+.col-w80 #createJob .btn-saveJob p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+}
+
+.col-w80 #createJob .btn-saveJob:hover {
+    background-color: #b3200e;
+}
+
+
+.col-w80 #manageUsers {
+    margin-bottom: 64px;
+}
+
+.col-w80 #manageUsers h3 {
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 3.4rem;
+    font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    margin: 22px 44px;
+}
+
+.col-w80 #manageUsers .btn-createAdminAccount {
+    width: 136px;
+    color: #fff;
+    padding: 10px 12px;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #fa541c;
+}
+
+.col-w80 #manageUsers .btn-createAdminAccount i {
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.col-w80 #manageUsers .btn-createAdminAccount p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+}
+
+.col-w80 #manageUsers .btn-createAdminAccount:hover {
+    background-color: #b3200e;
+}
+
+.col-w80 #manageUsers .subnav-user {
+    border-radius: 12px;
+    margin-left: 80px;
+    margin-bottom: 25px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.col-w80 #manageUsers .subnav-user h5 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0, 0.6);
+    font-family: 'Barlow', sans-serif;
+}
+
+.subnav-user-active {
+    color: #fa541c;
+    /* color: #fff; */
+    /* background-color: #fa541c; */
+    border-bottom: 2.2px solid #fa541c;;
+}
+
+.col-w80 #manageUsers .list-user {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 6px 14px; */
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgb(3 0 71 / 9%);
+}
+
+.col-w80 #manageUsers .list-user .user-item {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-top: 0.6px solid rgb(192, 192, 192, 0.4);
+}
+
+.col-w80 #manageUsers .list-user .user-item:hover {
+    background-color: rgba(145, 158, 171, 0.16);
+}
+
+.col-w80 #manageUsers .list-user .user-item:first-child {
+    height: 46px;
+    border-top: none !important;
+    cursor: unset;
+    font-weight: 500;
+    background-color: rgba(145, 158, 171, 0.16);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-transform: uppercase;
+}
+
+.user-item p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 12px;
+}
+
+.user-item i {
+    opacity: 0.6;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+.user-item i:hover {
+    color: #b3200e;
+}
+
+.user-item .userID {
+    width: 34%;
+}
+
+.user-item .userUsername {
+    width: 15%;
+    /* padding: 4px 0px;
+    margin-right: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: #fa541c; */
+    
+}
+
+/* .user-item:first-child .userUsername {
+    color: unset;
+    background-color: transparent;
+} */
+
+.user-item .userEmail {
+    width: 26%;
+}
+
+.user-item .userRole {
+    width: 10%;
+    padding: 4px 0px;
+    margin-right: 45px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: #fa541c;
+}
+
+.user-item:first-child .userRole {
+    color: unset;
+    margin-right: 30px;
+    background-color: transparent;
+}
+
+/* End section create new job */
+/* End container */

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@tr.minhtrieu</title>
+    <link rel="stylesheet" href="./assets/css/admin.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start header -->
+        <header>
+            <div class="nav">
+                <a href=""><p>Career</p></a>                             
+                <a href=""><p>Home</p></a>
+                <a href=""><p>Jobs</p></a>
+                <a href=""><p>Contact</p></a>                
+                <div class="btn-role">
+                    <a href=""><p>Admin Role</p></a>
+                    <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        
+        <!-- Start container -->
+        <div id="containers">
+            <div class="col-w20">
+                <div class="sidebar">
+                    <div class="info">
+                        <img class="avatar" src="./assets/img/minhtrieu.jpg" alt="">
+                        <div id="info-user"></div>
+                        <!-- <p class="name">Email: </p> -->
+                        <!-- <p class="name">Truong Minh Trieu</p> -->
+                    </div>
+
+                    <div class="sidebar-nav">
+                        <span id="btn-showBanner" class="item btn-active">
+                            <i class="fa-solid fa-square-poll-horizontal"></i>
+                            <p>Banner</p>
+                        </span>
+                        <span id="btn-showJobs" class="item">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <p>Manage job</p>
+                        </span>
+                        <span id="btn-createJob" class="item">
+                            <i class="fa-solid fa-id-badge"></i>
+                            <p>Create job</p>
+                        </span>
+                        <span id="btn-manageUsers" class="item">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <p>Manage users</p>
+                        </span>
+                    </div>
+
+                    <div class="btn-signout">                        
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Sign out</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-w80">
+                <div id="banner">
+                    <img src="./assets/img/background_signin.png" alt="">
+                </div>
+
+                <div style="display: none;" id="showJobs">
+                    <h3>List of jobs you have posted.</h3>
+
+                    <div onclick="createJob()" class="btn-createJob">
+                        <i class="fa-solid fa-plus"></i>
+                        <p>Create job</p>
+                    </div>
+
+                    <!-- <div class="subnav-job">
+                        <h5 id="btn-showAllJob" class="subnav-job-active">All Job</h5>
+                        <h5 id="btn-showJobOfAdmin">Admin</h5>
+                        <h5 id="btn-showJobOfRecruiters">Recruiters</h5>
+                    </div> -->
+
+                    <div id="jobs-js" class="list-job">
+                        <div class="job-item">
+                            <p class="jobQuantity">#</p>
+                            <p class="jobTitle">Job Title</p>
+                            <p class="jobLocation">Job Location</p>
+                            <!-- <p class="jobCategory">Job Category</p> -->
+                            <p class="jobCompany">Job Company</p>             
+                            <p class="jobPosterID">Recruiters identifier</p>                        
+                            <p class="active">Actions</p>                            
+                        </div>                  
+                    </div>
+                </div>
+
+                <div style="display: none;" id="createJob">
+                    <h3>Add New Job.</h3>
+
+                    <div class="form-create-job">
+                        <div class="row">
+                            <input id="inputJobTitle" type="text" class="jobTitle" placeholder="Job Title">
+                            
+                            <select id="inputJobCategory" name="Category" class="jobCategory">
+                                <option value="" disabled selected>Job Category</option>
+                                <option value="Design">Design</option>
+                                <option value="Development">Development</option>
+                                <option value="IT - Hardware">IT - Hardware</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="HR & Recruiting">HR & Recruiting</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Business Development">Business Development</option>
+                                <option value="Management">Management</option>
+                                <option value="Education">Education</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Multimedia Communications">Multimedia Communications</option>
+                                <option value="Customer Service">Customer Service</option>
+                                <option value="Accounting / Finance">Accounting / Finance</option>
+                                <option value="Administrative">Administrative</option>
+                                <option value="Transport / Logistics">Transport / Logistics</option>
+                            </select>                            
+                        </div>
+
+                        <div class="row">
+                            <select id="inputJobLevel" name="Level" class="jobLevel">
+                                <option value="" disabled selected>Job Level</option>
+                                <option value="Intern">Intern</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Junior">Junior</option>
+                                <option value="Senior">Senior</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Director">Director</option>
+                                <option value="Khac ...">Khac ...</option>
+                            </select>
+
+                            <select id="inputJobExperience" name="Experience" class="jobExperience">
+                                <option value="" disabled selected>Job Experience</option>
+                                <option value="No Experience">No Experience</option>
+                                <option value="1 - 3 Year Exp">1 - 3 Year Exp</option>
+                                <option value="1 Year Exp">1 Year Exp</option>
+                                <option value="2 Year Exp">2 Year Exp</option>
+                                <option value="3 Year Exp">3 Year Exp</option>
+                                <option value="3 - 5 Year Exp">3 - 5 Year Exp</option>
+                                <option value="4 Year Exp">4 Year Exp</option>
+                                <option value="5 Year Exp">5 Year Exp</option>
+                                <option value="6 - 8 Year Exp">6 - 8 Year Exp</option>
+                                <option value="6 Year Exp">6 Year Exp</option>
+                                <option value="7 Year Exp">7 Year Exp</option>
+                                <option value="8 Year Exp">8 Year Exp</option>
+                                <option value="Over 8 Year Exp">Over 8 Year Exp</option>
+                            </select>
+
+                            <select id="inputJobType" name="Type" class="jobType">
+                                <option value="" disabled selected>Job Type</option>
+                                <option value="Part time">Part time</option>
+                                <option value="Full time">Full time</option>
+                                <option value="Remote">Remote</option>
+                                <option value="Freelance">Freelance</option>
+                                <option value="Khac ...">Khac ...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="row">
+                            <input id="inputJobCompany" type="text" class="jobCompany" placeholder="Job Company">
+                            
+                            <select id="inputJobLocation" name="Location" class="jobLocation ">
+                                <option value="" disabled selected>Job Location</option>
+                                <option value="EU">EU</option>
+                                <option value="Korea">Korea</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Ha Noi">Ha Noi</option>
+                                <option value="Da Nang">Da Nang</option>
+                                <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                <option value="Khac ...">Khac ...</option>
+                            </select>
+
+                            <input id="inputJobOfferedSalary" type="text" class="jobOfferedSalary" placeholder="Job OfferedSalary">
+                        </div>
+
+                        <div class="row">
+                            <label for="inputPostedDay">Job PostedDay:</label>
+                            <input type="date" id="inputPostedDay" class="jobPostedDay" placeholder="" value="2023-01-18" min="2023-01-18" max="2023-06-18">
+                            
+                            <label for="inputExpirationDate">Job ExpirationDate:</label>
+                            <input type="date" id="inputExpirationDate" class="jobExpirationDate" placeholder="" value="2023-01-18" min="2023-01-18" max="2023-06-18">                            
+                        </div>
+
+                        <div class="row">
+                            <textarea id="inputJobDescription" name="Description" class="jobDescription" placeholder="Job Description" rows="6"></textarea>
+                        </div>
+
+                        <div class="row">
+                            <textarea id="inputJobResponsibility" name="Responsibility" class="jobResponsibility" placeholder="Job Responsibility" rows="4"></textarea>
+                        </div>
+
+                        <div class="row">
+                            <textarea id="inputJobSkills" name="Skills" class="jobSkills" placeholder="Job Skills" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="row">
+                            <textarea id="inputJobBenefits" name="Benefits" class="jobBenefits" placeholder="Job Benefits" rows="6"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="btn-saveJob" class="btn-saveJob">
+                        <p>Save job</p>
+                    </div>
+                </div>
+
+                <div style="display: none;" id="manageUsers">
+                    <h3>Manage user account information.</h3>
+
+                    <div onclick="createAdminAccount()" class="btn-createAdminAccount">
+                        <i class="fa-solid fa-plus"></i>
+                        <p>Add account</p>
+                    </div>
+
+                    <div class="subnav-user">
+                        <h5 id="btn-showAllUser" class="subnav-user-active">All user</h5>
+                        <h5 id="btn-showUserAdmin">Admin</h5>
+                        <h5 id="btn-showUserRecruiters">Recruiters</h5>
+                        <h5 id="btn-showUserCandidates">Candidates</h5>                        
+                    </div>
+                    
+                    <div id="users-js" class="list-user">  
+                        <div class="user-item">
+                            <p class="userID">Account identifier</p>
+                            <p class="userUsername">Username</p>
+                            <p class="userEmail">Email address</p>
+                            <p class="userRole">Role</p>                            
+                            <p class="actions">Actions</p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End container -->        
+
+
+        <!-- Start footer -->
+        <footer>
+
+        </footer>
+        <!-- End footer -->
+        <script src="./assets/js/admin.js"></script>
+    </div>  
+</body>
+</html>
